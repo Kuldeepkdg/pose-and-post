@@ -1,0 +1,216 @@
+.layouts {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #fce4ec 0%, #f9c6d0 40%, #fce4ec 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Nav ── */
+.layouts__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 48px;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 12px var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.layouts__logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.layouts__nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.layouts__nav-links a {
+  font-size: 0.875rem;
+  color: var(--text-mid);
+  transition: color var(--transition);
+}
+
+.layouts__nav-links a:hover { color: var(--pink-deep); }
+.layouts__nav-links a.active { color: var(--pink-deep); }
+
+/* ── Header ── */
+.layouts__header {
+  text-align: center;
+  padding: 48px 24px 24px;
+}
+
+.layouts__header h1 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.layouts__header p {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  font-style: italic;
+}
+
+/* ── Shot selector ── */
+.layouts__shot-selector {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 24px 0;
+}
+
+.shot-btn {
+  padding: 10px 32px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 2px solid var(--pink-main);
+  background: white;
+  color: var(--pink-deep);
+  transition: all var(--transition);
+  letter-spacing: 0.5px;
+}
+
+.shot-btn:hover {
+  background: var(--pink-light);
+  border-color: var(--pink-deep);
+  transform: translateY(-2px);
+}
+
+.shot-btn.active {
+  background: var(--pink-deep);
+  color: white;
+  border-color: var(--pink-deep);
+  box-shadow: 0 4px 16px rgba(233,30,140,0.3);
+}
+
+/* ── Templates grid ── */
+.layouts__section-title {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.layouts__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  padding: 24px 48px 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── Template card ── */
+.template-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform var(--transition);
+}
+
+.template-card:hover {
+  transform: translateY(-6px);
+}
+
+.template-card:hover .template-card__strip {
+  box-shadow: 0 12px 36px rgba(233,30,140,0.25);
+}
+
+.template-card__badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: var(--pink-deep);
+  color: white;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 50px;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.template-card__wrap {
+  position: relative;
+}
+
+.template-card__strip {
+  width: 90px;
+  padding: 8px 8px 20px;
+  border-radius: 6px;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: box-shadow var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.template-card__photo {
+  width: 100%;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.template-card__label-strip {
+  text-align: center;
+  font-size: 0.45rem;
+  color: var(--text-light);
+  margin-top: 2px;
+  font-style: italic;
+}
+
+.template-card__info {
+  text-align: center;
+}
+
+.template-card__name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.template-card__size {
+  font-size: 0.7rem;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+/* Strip border variants */
+.strip-border-0 { border: 2px solid white; }
+.strip-border-1 { border: 2px solid var(--pink-main); }
+.strip-border-2 { border: 2px solid #f0c0d0; background: #fff8fb; }
+.strip-border-3 { border: 2px dashed var(--pink-main); }
+.strip-border-4 { border: 2px solid #ffd1dc; background: linear-gradient(180deg, #fff 0%, #fff0f5 100%); }
+.strip-border-5 { border: 2px solid #c8a0b8; background: #fef0f8; }
+.strip-border-6 { border: 2px solid #f0d0c0; background: #fffaf8; }
+.strip-border-7 { border: 2px solid #d0c0f0; background: #f8f5ff; }
+.strip-border-8 { border: 3px solid var(--pink-deep); }
+.strip-border-9 { border: 2px solid #b0d0f0; background: #f5faff; }
+
+/* Sticker overlays on templates */
+.template-sticker {
+  position: absolute;
+  font-size: 0.9rem;
+  z-index: 3;
+  pointer-events: none;
+}

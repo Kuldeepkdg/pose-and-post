@@ -1,0 +1,59 @@
+:root {
+  --pink-light: #fce4ec;
+  --pink-mid: #f9c6d0;
+  --pink-main: #f48fb1;
+  --pink-deep: #e91e8c;
+  --pink-btn: #e91e8c;
+  --white: #ffffff;
+  --text-dark: #2c2c2c;
+  --text-mid: #5a5a5a;
+  --text-light: #9a9a9a;
+  --border: #f0c0cc;
+  --shadow: rgba(233, 30, 140, 0.15);
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --radius: 16px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-body);
+  background: var(--pink-light);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: var(--font-body);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--pink-light);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--pink-main);
+  border-radius: 3px;
+}
