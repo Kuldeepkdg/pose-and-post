@@ -20,5 +20,4 @@ function App() {
   );
 }
 
-// Added this message to check revert
 export default App;
